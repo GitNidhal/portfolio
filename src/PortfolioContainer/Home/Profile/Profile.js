@@ -1,7 +1,5 @@
 import React from "react";
-import Typical from "react-typical";
 import "./Profile.css";
-import Navigat from "../../nav/Navigat";
 import Container from "react-bootstrap/esm/Container";
 
 export default function Profile() {

@@ -7,15 +7,9 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <Navigat /> */}
-
         <Routes>
           <Route path="/" element={<Review />} />
           <Route path="/project/:id" element={<ProjectDisplay />} />
-
-          {/* <Resume /> */}
-
-          {/* <ContactUs/> */}
         </Routes>
       </Router>
     </div>
