@@ -20,6 +20,7 @@ import {
   FaRedhat,
 } from "react-icons/fa";
 import { DiNodejs } from "react-icons/di";
+import { TbBrandReactNative } from "react-icons/tb";
 
 import Container from "react-bootstrap/esm/Container";
 import "./Skills.css";
@@ -65,8 +66,8 @@ const Skills = () => {
                     <h3 style={{ color: "#F1ECEB" }}>REACT</h3>
                   </div>
                   <div>
-                    <DiNodejs size="5rem" color="green" />
-                    <h3 style={{ color: "#F1ECEB" }}>Node JS</h3>
+                    <TbBrandReactNative size="5rem" color="blue" />
+                    <h3 style={{ color: "#F1ECEB" }}>React Native</h3>
                   </div>
                 </div>
                 <br />
@@ -79,6 +80,10 @@ const Skills = () => {
                       justifyContent: "space-evenly",
                     }}
                   >
+                    <div>
+                      <DiNodejs size="5rem" color="green" />
+                      <h3 style={{ color: "#F1ECEB" }}>Node JS</h3>
+                    </div>
                     <div>
                       <BsFillBootstrapFill size="5rem" color="#8F00FF" />
                       <h3 style={{ color: "#F1ECEB" }}>Bootstrap</h3>

@@ -35,18 +35,23 @@ const ProjectDisplay = () => {
       <div className="container-body mt-4">
         <div className="row r3">
           <div className="col-md-5 p-0 klo">
-            <h2>
+            <h2 style={{ color: "black" }}>
               Details : <br />
             </h2>
-            <p> {project.detail} </p>
-            <h2>
+            <p style={{ color: "black" }}>{project.detail} </p>
+            <h2 style={{ color: "black" }}>
               Skills : <br />
             </h2>
             <ul>
-              <h4>{project.skills}</h4>
+              <p style={{ color: "black" }}>{project.skills}</p>
             </ul>
-            <ul>
-              <FaGithub size="6rem" color="black" />
+            <ul style={{ textAlign: "center" }}>
+              <li>
+                <FaGithub size="5rem" color="black" />
+              </li>
+              <a href={project.github}>
+                <li style={{ color: "black" }}> {project.github} </li>
+              </a>
             </ul>
           </div>
 

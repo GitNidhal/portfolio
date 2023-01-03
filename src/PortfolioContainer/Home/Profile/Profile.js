@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Profile.css";
 import Container from "react-bootstrap/esm/Container";
+import Typical from "react-typical";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 export default function Profile() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <Container>
@@ -11,19 +18,16 @@ export default function Profile() {
             <div className="profile-details">
               <div className="colz">
                 <div className="colz-icon">
-                  <a href="#">
+                  <a href="https://www.facebook.com/nadh.rebhi">
                     <i className="fa fa-facebook-square"></i>
                   </a>
-                  <a href="#">
-                    <i className="fa fa-envelope"></i>
-                  </a>
-                  <a href="#">
+                  <a href="https://www.instagram.com/nadh.rebhi/">
                     <i className="fa fa-instagram"></i>
                   </a>
-                  <a href="#">
+                  <a href="https://twitter.com/nadh_rebhi">
                     <i className="fa fa-twitter"></i>
                   </a>
-                  <a href="#">
+                  <a href="https://linkedin.com/in/nidhalrebhi">
                     <i className="fa fa-linkedin"></i>
                   </a>
                 </div>
@@ -40,13 +44,15 @@ export default function Profile() {
                     Junior Full Stack Developer
                   </h1>
                   <span className="profile-role-tagline">
-                    Cyber security analyst & building websites with front and
+                    Cyber security engineer & building websites with front and
                     back end operations .
                   </span>
                 </span>
               </div>
               <div className="profile-optins">
-                <button className="btn highlighted-btn">Hire me</button>
+                <button className="btn highlighted-btn" onClick={handleShow}>
+                  Hire me
+                </button>
                 <a href="NidhalRebhi.pdf" download="NidhalRebhi.pdf">
                   <button className="btn highlighted-btn">Get Resume</button>
                 </a>
@@ -57,6 +63,26 @@ export default function Profile() {
             </div>
           </div>
         </div>
+        {/* hire me */}
+        <Modal show={show} onHide={handleClose} animation={false}>
+          <Modal.Header closeButton>
+            <Modal.Title>Contact me</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Welcome !</Modal.Body>
+          <Modal.Body>
+            You can contact me in this mail r.nidhal97@outlook.fr
+          </Modal.Body>
+          <Modal.Body>
+            or, you can contact me in Whatsapp with this number +21653416956
+          </Modal.Body>
+          <Modal.Body>Thank you ♥</Modal.Body>
+
+          <Modal.Footer>
+            <Button variant="success" onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </Container>
     </>
   );
