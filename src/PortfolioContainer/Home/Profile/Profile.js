@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Profile.css";
 import Container from "react-bootstrap/esm/Container";
-import Typical from "react-typical";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
